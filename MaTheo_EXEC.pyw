@@ -19,6 +19,40 @@ photo_main = PhotoImage(file='img_main.png')
 label_photo = Label(tk, bg="#6e00ff", image=photo_main, compound='bottom')
 label_photo.place(x=4, y=4)
 
+menu_bar = Menu(tk)
+menu_main = Menu(menu_bar, tearoff=0, activebackground="#6e00ff")
+menu_main.add_command(label="Pesquisar fórmula", command=None)
+menu_main.add_command(label="Material didático", command=None)
+menu_main.add_separator()
+menu_main.add_command(label="Fechar", command=tk.quit)
+menu_bar.add_cascade(label="☰", menu=menu_main)
+
+menu_2 = Menu(menu_bar, tearoff=0, activebackground="#6e00ff")
+menu_2.add_command(label="Teoria dos Conjuntos", command=None)
+menu_2.add_command(label="Álgebra", command=None)
+menu_2.add_command(label="Potenciação", command=None)
+menu_bar.add_cascade(label="Ensino Fundamental e Médio", menu=menu_2)
+
+menu_3 = Menu(menu_bar, tearoff=0, activebackground="#6e00ff")
+menu_3.add_command(label="Lógica", command=None)
+menu_3.add_command(label="Conversões de Bases", command=None)
+menu_3.add_command(label="Cálculo", command=None)
+menu_bar.add_cascade(label="Ensino Superior", menu=menu_3)
+
+menu_4 = Menu(menu_bar, tearoff=0, activebackground="#6e00ff")
+menu_4.add_command(label="Razão e Proporção", command=None)
+menu_4.add_command(label="Grandezas e Divisões Proporcionais", command=None)
+menu_bar.add_cascade(label="Comercial e Financeira", menu=menu_4)
+
+menu_5 = Menu(menu_bar, tearoff=0, activebackground="#6e00ff")
+menu_5.add_command(label="...", command=None)
+menu_bar.add_cascade(label="Filosofia e História da Matemática", menu=menu_5)
+
+menu_6 = Menu(menu_bar, tearoff=0, activebackground="#6e00ff")
+menu_bar.add_cascade(label="Sobre", menu=menu_6, command=None)
+
+tk.config(menu=menu_bar)
+
 '''
 JANELA:  1028largura x 648altura
 
@@ -57,7 +91,7 @@ def but01():
     b01.resizable(width=0, height=0)
     b01.configure(background="#6e00ff", padx=1, pady=1)
 
-but_01 = Button(tk, text='Teoria dos Conjuntos', font="arial 8 italic bold", fg="#1e0066", bg="#6e00ff", height=1, width=30, command=but01, activebackground="#6e00ff", activeforeground="#ffffff", borderwidth=1, relief="flat", overrelief="raised")
+but_01 = Button(tk, text='Teoria dos Conjuntos', font="Courier 9 italic", fg="#ffffff", bg="#6e00ff", height=1, width=30, command=but01, activebackground="#6e00ff", activeforeground="#ffffff", borderwidth=0, relief="flat", overrelief=None)
 but_01.place(x=34, y=38)
 
 but_02 = Button(tk, text='Conjuntos Numéricos', font="arial 8 italic bold", fg="#1e0066", bg="#6e00ff", height=1, width=30, command=but01, activebackground="#6e00ff", activeforeground="#ffffff", borderwidth=1, relief="flat", overrelief="raised")
