@@ -21,13 +21,15 @@ label_photo.place(x=4, y=4)
 
 menu_bar = Menu(tk, background="#1d2438", fg="#ffffff")
 menu_main = Menu(menu_bar, tearoff=False, background="#ffffff", activebackground="#1d2438", font="Arial 8", fg="#000000", activeforeground="#ffffff")
-menu_main.add_command(label="Pesquisar teorema(Criar botão menu)", command=None)
-menu_main.add_command(label="Tabelas matemáticas", command=None)
-menu_main.add_command(label="Materiais didáticos", command=None)
+menu_main.add_command(label="Pesquisar Teoremas", command=None)#CRIAR BOTÃO MENU CONTENDO TODAS AS FÓRMULAS------------------------------------------
+menu_main.add_command(label="Tabelas Matemáticas", command=None)#ABRIR NOVA JANELA CONTENDO AS TABELAS(DESEJÁVEL DISPONIBILIZAR DOWNLOAD)------------
+menu_main.add_command(label="Materiais Didáticos", command=None)#ABRIR NOVA JANELA CONTENDO EBOOKS---------------------------------------------------
+menu_main.add_command(label="Favoritos", command=None)#ARRASTAR TÓPICOS PARA A ÁREA DE TRABALHO DO SOFTWARE(QUADRO DE FÓRMULAS)----------------------
 menu_main.add_separator()
 menu_main.add_command(label="Fechar", command=tk.quit)
 menu_bar.add_cascade(label=" ☰ ", menu=menu_main)
-
+#--------------------------------------------------------------------------------------------------------------------------------------------------
+#TODOS OS TÓPICOS DOS MENUS AQUI(EXCETO O MENU 'SOBRE') ABRIRÃO NOVAS JANELAS PARA QUE SE POSSA UTILIZAR VÁRIOS TÓPICOS SEM PRECISAR FECHAR O ATUAL
 menu_2 = Menu(menu_bar, tearoff=False, background="#ffffff", activebackground="#1d2438", font="Arial 8", fg="#000000", activeforeground="#ffffff")
 menu_2.add_command(label="Teoria dos Conjuntos", command=None)
 menu_2.add_command(label="Conjuntos Numéricos", command=None)
