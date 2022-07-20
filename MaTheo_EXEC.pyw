@@ -20,10 +20,10 @@ photo_main = PhotoImage(file='img_main.png')
 label_photo = Label(tk, bg="#2f4f34", image=photo_main, compound='bottom')
 label_photo.place(x=4, y=4)
 
-ft = font.Font(family="Ink Free", size=9, weight="normal", slant="italic")
+ft = font.Font(family="Ink Free", size=10, weight="normal", slant="italic")
 
-menu_bar = Menu(tk, font=ft)
-menu_main = Menu(menu_bar, tearoff=False, background="#2f4f34", activebackground="#2f4f34", font=ft, fg="#ff7f50", activeforeground="#ffffff")
+menu_bar = Menu(tk)
+menu_main = Menu(menu_bar, tearoff=False, background="#2f4f34", activebackground="#2f4f34", font=ft, fg="#ffffff", activeforeground="#ff7f50")
 menu_main.add_command(label="Pesquisar Teoremas", command=None)#CRIAR BOTÃO MENU CONTENDO TODAS AS FÓRMULAS------------------------------------------
 menu_main.add_command(label="Tabelas Matemáticas", command=None)#ABRIR NOVA JANELA CONTENDO AS TABELAS(DESEJÁVEL DISPONIBILIZAR DOWNLOAD)------------
 menu_main.add_command(label="Materiais Didáticos", command=None)#ABRIR NOVA JANELA CONTENDO EBOOKS---------------------------------------------------
@@ -33,7 +33,7 @@ menu_main.add_command(label="Fechar", command=tk.quit)
 menu_bar.add_cascade(label=" ☰ ", menu=menu_main)
 #--------------------------------------------------------------------------------------------------------------------------------------------------
 #TODOS OS TÓPICOS DOS MENUS AQUI(EXCETO O MENU 'SOBRE') ABRIRÃO NOVAS JANELAS PARA QUE SE POSSA UTILIZAR VÁRIOS TÓPICOS SEM PRECISAR FECHAR O ATUAL
-menu_2 = Menu(menu_bar, tearoff=False, background="#2f4f34", activebackground="#2f4f34", font=ft, fg="#ff7f50", activeforeground="#ffffff")
+menu_2 = Menu(menu_bar, tearoff=False, background="#2f4f34", activebackground="#2f4f34", font=ft, fg="#ffffff", activeforeground="#ff7f50")
 menu_2.add_command(label="Teoria dos Conjuntos", command=teste)
 menu_2.add_command(label="Conjuntos Numéricos", command=None)
 menu_2.add_command(label="Expressões e Equações Algébricas", command=None)
@@ -59,13 +59,13 @@ menu_2.add_command(label="Teoria dos Conjuntos", command=None)
 menu_2.add_command(label="Geometria Espacial", command=None)
 menu_bar.add_cascade(label="   Ensino Fundamental e Médio   ", menu=menu_2)
 
-menu_3 = Menu(menu_bar, tearoff=False, background="#2f4f34", activebackground="#2f4f34", font=ft, fg="#ff7f50", activeforeground="#ffffff")
+menu_3 = Menu(menu_bar, tearoff=False, background="#2f4f34", activebackground="#2f4f34", font=ft, fg="#ffffff", activeforeground="#ff7f50")
 menu_3.add_command(label="Lógica", command=None)
 menu_3.add_command(label="Conversões de Bases", command=None)
 menu_3.add_command(label="Cálculo", command=None)
 menu_bar.add_cascade(label="   Ensino Superior   ", menu=menu_3)
 
-menu_4 = Menu(menu_bar, tearoff=False, background="#2f4f34", activebackground="#2f4f34", font=ft, fg="#ff7f50", activeforeground="#ffffff")
+menu_4 = Menu(menu_bar, tearoff=False, background="#2f4f34", activebackground="#2f4f34", font=ft, fg="#ffffff", activeforeground="#ff7f50")
 menu_4.add_command(label="Razão e Proporção", command=None)
 menu_4.add_command(label="Grandezas e Divisões Proporcionais", command=None)
 menu_4.add_command(label="Regra de Sociedade", command=None)
@@ -86,7 +86,7 @@ menu_4.add_command(label="Debêntures", command=None)
 menu_4.add_command(label="Amortizações", command=None)
 menu_bar.add_cascade(label="   Comercial e Financeira   ", menu=menu_4)
 
-menu_5 = Menu(menu_bar, tearoff=False, background="#2f4f34", activebackground="#2f4f34", font=ft, fg="#ff7f50", activeforeground="#ffffff")
+menu_5 = Menu(menu_bar, tearoff=False, background="#2f4f34", activebackground="#2f4f34", font=ft, fg="#ffffff", activeforeground="#ff7f50")
 menu_5.add_command(label="Idade Antiga e Período Clássico 6000 a.C.-500 d.C", command=None)
 menu_5.add_command(label="Idade Média 500-1500", command=None)
 menu_5.add_command(label="Renascimento 1500-1680", command=None)
@@ -95,7 +95,7 @@ menu_5.add_command(label="Século XIX 1800-1900", command=None)
 menu_5.add_command(label="Era Moderna 1900-Hoje", command=None)
 menu_bar.add_cascade(label="   Filosofia e História da Matemática   ", menu=menu_5)
 
-menu_6 = Menu(menu_bar, tearoff=False, background="#2f4f34", activebackground="#2f4f34", font=ft, fg="#ff7f50", activeforeground="#ffffff")
+menu_6 = Menu(menu_bar, tearoff=False, background="#2f4f34", activebackground="#2f4f34", font=ft, fg="#ffffff", activeforeground="#ff7f50")
 menu_bar.add_cascade(label="    Sobre    ", menu=menu_6, command=None)
 
 tk.config(menu=menu_bar)
