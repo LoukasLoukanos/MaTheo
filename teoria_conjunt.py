@@ -7,7 +7,7 @@ def teste():
     b01.title("MaTheo   Teoria dos Conjuntos")#MaTheo, das iniciais de "Mathematical Theorems"
     b01.geometry('450x278+250+100') 
     #b01.resizable(width=0, height=0)
-    b01.configure(background="#2c2a3a", padx=1, pady=1)
+    b01.configure(background="#2F2D30", padx=1, pady=1)
 
     #_______________UNIÕES___________________________________________________________________________
     #remover caracteres:------------------------------------------------------
@@ -99,18 +99,18 @@ def teste():
     matriz = {}
 
     #texto informando para definir um nome para o conjunto
-    label_conj_text = Label(b01, text="Definir o nome do conjunto:", font="arial 8", fg="#ffffff", bg="#2c2a3a", padx=3)
+    label_conj_text = Label(b01, text="Definir o nome do conjunto:", font="arial 8", fg="#ffffff", bg="#2F2D30", padx=3)
     label_conj_text.place(x=10, y=20)
 
     #número atual do conjunto a ser definido
     conj_num = num_conj+1
     conj_numvar = StringVar()
     conj_numvar.set(conj_num)
-    label_conj_num = Label(b01, textvariable=conj_numvar, font="arial 8", fg="#ffffff", bg="#2c2a3a", padx=3)
+    label_conj_num = Label(b01, textvariable=conj_numvar, font="arial 8", fg="#ffffff", bg="#2F2D30", padx=3)
     label_conj_num.place(x=148, y=20)
         
     #entrada do nome do conjunto
-    conj = Entry(b01, font="arial 8 bold", fg="#ffffff", bg="#2c2a3a", width=3)
+    conj = Entry(b01, font="arial 8 bold", fg="#ffffff", bg="#2F2D30", width=3)
     conj.place(x=178, y=20)
 
     def button_adc_elem():
@@ -118,35 +118,35 @@ def teste():
         elem_array = []
         global num_conj
         global conjunt
-        fr_conj= Frame(b01, borderwidth=1, relief="flat",background="#2c2a3a") #relief=flat,raised,sunke,solid(tipo de borda)
+        fr_conj= Frame(b01, borderwidth=1, relief="flat",background="#2F2D30") #relief=flat,raised,sunke,solid(tipo de borda)
         fr_conj.place(x=10, y=20, width=1000, height=1000)
 
         conjunt = conjunt + 1
             
         #aparecer texto informando os conjuntos ja definidos
-        label_conj_text02 = Label(b01, text="Conjuntos:", font="arial 8", fg="#ffffff", bg="#2c2a3a", padx=3)
+        label_conj_text02 = Label(b01, text="Conjuntos:", font="arial 8", fg="#ffffff", bg="#2F2D30", padx=3)
         label_conj_text02.place(x=10, y=20)
         
 #-------ERRO DO TKINTER??? TEXTVARIAVEL NÃO APARECE QUANDO ESTÁ NO ESCOPO DE FUNÇÃO???------------------------------------------------------------
         #aparecer conjuntos ja definidos
         conj_defin = StringVar()
         conj_defin.set(conj_array)
-        label_conj_num = Label(b01, textvariable=conj_defin, font="arial 8 bold", fg="#ffffff", bg="#2c2a3a", padx=3)
+        label_conj_num = Label(b01, textvariable=conj_defin, font="arial 8 bold", fg="#ffffff", bg="#2F2D30", padx=3)
         label_conj_num.place(x=10, y=38)
 
         #texto informando para definir a quantidade de elementos
-        label_conj_text = Label(b01, text="Definir a quantidade de elementos do conjunto", font="arial 8", fg="#ffffff", bg="#2c2a3a", padx=3)
+        label_conj_text = Label(b01, text="Definir a quantidade de elementos do conjunto", font="arial 8", fg="#ffffff", bg="#2F2D30", padx=3)
         label_conj_text.place(x=10, y=60)
 
         #nome do conjunto a ser definido a quantidade de elementos
         conj_nom = conj_array[conjunt]
         conj_nomvar = StringVar()
         conj_nomvar.set(conj_nom)
-        label_conj_nom = Label(b01, textvariable=conj_nomvar, font="arial 8 bold", fg="#ffffff", bg="#2c2a3a", padx=3)
+        label_conj_nom = Label(b01, textvariable=conj_nomvar, font="arial 8 bold", fg="#ffffff", bg="#2F2D30", padx=3)
         label_conj_nom.place(x=240, y=60)
         
         #entrada da quantidade de elementos
-        count = Entry(b01, font="arial 8 bold", fg="#ffffff", bg="#2c2a3a", width=3)
+        count = Entry(b01, font="arial 8 bold", fg="#ffffff", bg="#2F2D30", width=3)
         count.place(x=60, y=82)
 
         def elements():
@@ -156,29 +156,29 @@ def teste():
             count_elem = int(count_elem)
             if ind_elem < count_elem:
 
-                fr_conj= Frame(b01, borderwidth=1, relief="flat",background="#2c2a3a") #relief=flat,raised,sunke,solid(tipo de borda)
+                fr_conj= Frame(b01, borderwidth=1, relief="flat",background="#2F2D30") #relief=flat,raised,sunke,solid(tipo de borda)
                 fr_conj.place(x=10, y=60, width=1000, height=1000)
 
                 #texto informando para definir os elementos
-                label_conj_text = Label(b01, text="Adicione o", font="arial 8", fg="#ffffff", bg="#2c2a3a", padx=3)
+                label_conj_text = Label(b01, text="Adicione o", font="arial 8", fg="#ffffff", bg="#2F2D30", padx=3)
                 label_conj_text.place(x=10, y=60)
 
                 conj_text = process
                 conj_textvar = StringVar()
                 conj_textvar.set(conj_text)
-                label_conj_text = Label(b01, textvariable=conj_textvar, font="arial 8", fg="#ffffff", bg="#2c2a3a", padx=3)
+                label_conj_text = Label(b01, textvariable=conj_textvar, font="arial 8", fg="#ffffff", bg="#2F2D30", padx=3)
                 label_conj_text.place(x=60, y=60)
 
-                label_conj_text = Label(b01, text="° elemento do conjunto", font="arial 8",fg="#ffffff", bg="#2c2a3a", padx=3)
+                label_conj_text = Label(b01, text="° elemento do conjunto", font="arial 8",fg="#ffffff", bg="#2F2D30", padx=3)
                 label_conj_text.place(x=70, y=60)
 
                 conj_nom = conj_array[ind_elem]
                 conj_nomvar = StringVar()
                 conj_nomvar.set(conj_nom)
-                label_conj_nom = Label(b01, textvariable=conj_nomvar, font="arial 8 bold", fg="#ffffff", bg="#2c2a3a", padx=3)
+                label_conj_nom = Label(b01, textvariable=conj_nomvar, font="arial 8 bold", fg="#ffffff", bg="#2F2D30", padx=3)
                 label_conj_nom.place(x=190, y=60)
 
-                entry_elem = Entry(b01, font="arial 8 bold", fg="#ffffff", bg="#2c2a3a", width=3)
+                entry_elem = Entry(b01, font="arial 8 bold", fg="#ffffff", bg="#2F2D30", width=3)
                 entry_elem.place(x=60, y=82)
 
                 def adc_elements():
@@ -219,15 +219,15 @@ def teste():
                     else:
                         elements()
 
-                but_adc_elem = Button(b01, text='Adicionar', font="arial 7", fg="#ffffff", bg="#2c2a3a", padx=3, height=1, width=14, command=adc_elements)
+                but_adc_elem = Button(b01, text='Adicionar', font="arial 7", fg="#ffffff", bg="#2F2D30", padx=3, height=1, width=14, command=adc_elements)
                 but_adc_elem.place(x=90, y=80)
 
-        but_adc = Button(b01, text='Definir quantidade', font="arial 7", fg="#ffffff", bg="#2c2a3a", padx=3, height=1, width=14, command=elements)
+        but_adc = Button(b01, text='Definir quantidade', font="arial 7", fg="#ffffff", bg="#2F2D30", padx=3, height=1, width=14, command=elements)
         but_adc.place(x=90, y=80)
 
     def button_definir_elementos():
         if num_conj >= 2:
-            but_adc = Button(b01, text='Definir elementos', font="arial 7", fg="#ffffff", bg="#2c2a3a", padx=3, height=1, width=18, command=button_adc_elem)
+            but_adc = Button(b01, text='Definir elementos', font="arial 7", fg="#ffffff", bg="#2F2D30", padx=3, height=1, width=18, command=button_adc_elem)
             but_adc.place(x=80, y=90)
 
     #função do botão de definir nomes de conjuntos
@@ -237,7 +237,7 @@ def teste():
         global conj
 
         #aparecer texto informando os conjuntos ja definidos
-        label_conj_text02 = Label(b01, text="Conjuntos:", font="arial 8", fg="#ffffff", bg="#2c2a3a", padx=3)
+        label_conj_text02 = Label(b01, text="Conjuntos:", font="arial 8", fg="#ffffff", bg="#2F2D30", padx=3)
         label_conj_text02.place(x=10, y=45)
             
         #aparecer conjuntos ja definidos
@@ -245,7 +245,7 @@ def teste():
         conj_array.append(conj_name)
         conj_defin = StringVar()
         conj_defin.set(conj_array)
-        label_conj_num = Label(b01, textvariable=conj_defin, font="arial 8 bold", fg="#ffffff", bg="#2c2a3a", padx=3)
+        label_conj_num = Label(b01, textvariable=conj_defin, font="arial 8 bold", fg="#ffffff", bg="#2F2D30", padx=3)
         label_conj_num.place(x=10, y=63)
 
         #número atual do novo conjunto a ser definido
@@ -253,12 +253,12 @@ def teste():
         conj_num = num_conj + 1
         conj_numvar = StringVar()
         conj_numvar.set(conj_num)
-        label_conj_num = Label(b01, textvariable=conj_numvar, font="arial 8", fg="#ffffff", bg="#2c2a3a", padx=3)
+        label_conj_num = Label(b01, textvariable=conj_numvar, font="arial 8", fg="#ffffff", bg="#2F2D30", padx=3)
         label_conj_num.place(x=148, y=20)
         button_definir_elementos()
 
     #botão de definir nomes de conjuntos
-    but_adc = Button(b01, text='Ok', font="arial 6", fg="#ffffff", bg="#2c2a3a", padx=3, height=1, width=5, command=button_adc_conj)
+    but_adc = Button(b01, text='Ok', font="arial 6", fg="#ffffff", bg="#2F2D30", padx=3, height=1, width=5, command=button_adc_conj)
     but_adc.place(x=206, y=20)
 
     mainloop()
